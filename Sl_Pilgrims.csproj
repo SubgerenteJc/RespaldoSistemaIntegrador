@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\Salida\Sl_Pilgrims 05_2019\Application Files\Sl_Pilgrims_1_0_0_50\Sl_Pilgrims.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00AF29FE-7CB2-4D34-8F3D-EA1515DC670B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Sl_Pilgrims</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Salida\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>55E400F915EE742D65284F3F3289431B8DBF4E7E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Sl_Pilgrims_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Office.Interop.Excel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\WorkCycleService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="dbConnector.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="mx\com\pilgrims\wslogistica\wsLogistica.cs" />
+    <Compile Include="mx\com\pilgrims\wslogistica\WSL_GetInfoEmbarqueCompletedEventHandler.cs" />
+    <Compile Include="mx\com\pilgrims\wslogistica\WSL_GetInfoEmbarqueCompletedEventArgs.cs" />
+    <Compile Include="WebServTest\wsLogisticaSoap.cs" />
+    <Compile Include="WebServTest\WSL_GetInfoEmbarqueRequest.cs" />
+    <Compile Include="WebServTest\WSL_GetInfoEmbarqueRequestBody.cs" />
+    <Compile Include="WebServTest\WSL_GetInfoEmbarqueResponse.cs" />
+    <Compile Include="WebServTest\WSL_GetInfoEmbarqueResponseBody.cs" />
+    <Compile Include="WebServTest\wsLogisticaSoapChannel.cs" />
+    <Compile Include="WebServTest\wsLogisticaSoapClient.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\DispatchServiceStatus.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\SystemsLinkValidationFault.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ParameterMessage.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\SystemsLinkInternalServerErrorFault.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\SystemsLinkAuthenticationFault.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ConcurrencyBase.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ConcurrencyAndValidityBase.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ValidationErrorCollection.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ValidationDispatch.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\DispatchHorizon.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ConcurrencyFieldRule.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ValidityIssue.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\DispatchSaveError.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ExtraDataItem.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\Move.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\Order.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ConcurrencyFieldRuleType.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ValidationItemSeverity.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ValidationError.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ConcurrencyBaseNested.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ReferenceNumber.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\TMSOrderLineItemDetail.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ConcurrencyNestedAndValidityBase.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\Leg.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\StopBase.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\Stop.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\OrderBase.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\QuanityToShipUnitEnum.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\Location.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\Freight.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\AdHocAddress.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ValidityBase.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\FreightTank.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\FreightBase.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ValidationCategoryEnum.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\LegAndOrderMap.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ValidationReturnObject.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ExtraDataRequest.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ExtraDataElementEnum.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\AssetTypeEnum.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\CurrrentActivityBase.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\AssetAssignment.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\CurrentActivity.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\AssetTypeAndId.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\SortDirectionEnum.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\PriorAndNextTripArguments.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\PriorAndNextTrip.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\DeadheadReturn.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\ArriveDepartEnum.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\CascadeDatesReturn.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\IDispatchHorizonService.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\IDispatchHorizonServiceChannel.cs" />
+    <Compile Include="TmwDispatchHorizonSvc\DispatchHorizonServiceClient.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Carrier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Commodity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Contact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Driver.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Freight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.InvoiceDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.MileageALKData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.MileageServerData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.PayDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.ReferenceNumber.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Stop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Token.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Tractor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WindowsFormsApp1.WorkCycleService.Trailer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WorkCycleService.wsdl" />
+    <None Include="Connected Services\WorkCycleService\WorkCycleService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WorkCycleService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WorkCycleService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WorkCycleService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WorkCycleService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WorkCycleService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkCycleService\WorkCycleService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Sl_Pilgrims_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WorkCycleService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkCycleService\WorkCycleService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkCycleService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkCycleService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkCycleService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

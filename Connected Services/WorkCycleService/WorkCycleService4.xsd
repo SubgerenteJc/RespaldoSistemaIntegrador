@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses.Common.Enumerations" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses.Common.Enumerations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ModuleLicenseStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Invalid" />
+      <xs:enumeration value="NoLicense" />
+      <xs:enumeration value="Partial" />
+      <xs:enumeration value="Valid" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ModuleLicenseStatusEnum" nillable="true" type="tns:ModuleLicenseStatusEnum" />
+  <xs:simpleType name="ModuleNameEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FreightBoardPosting" />
+      <xs:enumeration value="FuelCardAdvance" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ModuleNameEnum" nillable="true" type="tns:ModuleNameEnum" />
+  <xs:complexType name="ArrayOfSubModuleNameEnum">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubModuleNameEnum" type="tns:SubModuleNameEnum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubModuleNameEnum" nillable="true" type="tns:ArrayOfSubModuleNameEnum" />
+  <xs:simpleType name="SubModuleNameEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="FuelCardAdvanceComdataExpressCheck" />
+      <xs:enumeration value="FuelCardAdvanceTchMoneyCode" />
+      <xs:enumeration value="FreightBoardPostingDat" />
+      <xs:enumeration value="FreightBoardPostingFlj" />
+      <xs:enumeration value="FreightBoardPostingGld" />
+      <xs:enumeration value="FreightBoardPostingIts" />
+      <xs:enumeration value="FreightBoardPostingPep" />
+      <xs:enumeration value="FreightBoardPostingTlr" />
+      <xs:enumeration value="FreightBoardPostingVes" />
+      <xs:enumeration value="FreightBoardPostingDft" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SubModuleNameEnum" nillable="true" type="tns:SubModuleNameEnum" />
+</xs:schema>

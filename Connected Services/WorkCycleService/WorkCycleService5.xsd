@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.Services.ServiceInterfaces" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.Services.ServiceInterfaces" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ListOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Add" />
+      <xs:enumeration value="InsertBefore" />
+      <xs:enumeration value="InsertAfter" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ListOperation" nillable="true" type="tns:ListOperation" />
+</xs:schema>

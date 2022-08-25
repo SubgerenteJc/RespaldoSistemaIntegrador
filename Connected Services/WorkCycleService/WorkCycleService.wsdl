@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="WorkCycleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" />
+      <xsd:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses.Common.Enumerations" />
+      <xsd:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.Services.ServiceInterfaces" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkCycleService_GetToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetToken" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ReleaseToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseToken" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ReleaseToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewCarrier_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewCarrier" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewCarrier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewCarrierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewCarriers_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewCarriers" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewCarriers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewCarriersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveCarrier_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCarrier" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveCarrier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCarrierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedCarriers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedCarriers" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedCarriers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedCarriersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveCarrier_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCarrier" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveCarrier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCarrierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveDriver_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveDriver" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveDriver_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedDrivers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedDrivers" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedDrivers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedDriversResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveDriver_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDriver" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveDriver_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrders" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewStop_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewStop" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewStop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewStopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewStops_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewStops" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewStops_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewStopsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetStop_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStop" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetStop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetStopByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStopByID" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetStopByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStopByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_UpdateStop_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStop" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_UpdateStop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_DeleteStop_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStop" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_DeleteStop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewFreight" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewFreights_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewFreights" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewFreights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewFreightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreight" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_UpdateFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFreight" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_UpdateFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_DeleteFreight_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFreight" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_DeleteFreight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFreightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewCompany" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewCompanies" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCompany" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompany" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedContacts" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCity" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetCommodity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodity" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetCommodity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommodityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewReferenceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewReferenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_NewReferenceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewReferenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveReferenceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveReferenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveReferenceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveReferenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveReferenceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReferenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveReferenceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReferenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_DeleteReferenceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReferenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_DeleteReferenceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReferenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveTractor_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTractor" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveTractor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTractorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedTractors_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedTractors" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedTractors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedTractorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveTractor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTractor" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveTractor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTractorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveTrailer_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTrailer" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrieveTrailer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveTrailerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedTrailers_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedTrailers" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RetrievePagedTrailers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePagedTrailersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveTrailer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTrailer" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_SaveTrailer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTrailerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:RateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_RateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetFuelTaxMileageByApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuelTaxMileageByApp" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetFuelTaxMileageByApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuelTaxMileageByAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetFuelTaxMileageByInterface_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuelTaxMileageByInterface" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_GetFuelTaxMileageByInterface_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuelTaxMileageByInterfaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_AlkMileageLookupFromStopList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlkMileageLookupFromStopList" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_AlkMileageLookupFromStopList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlkMileageLookupFromStopListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ReCalculateMileageForMove_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReCalculateMileageForMove" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ReCalculateMileageForMove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReCalculateMileageForMoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ReCalculateMileageForOrderHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReCalculateMileageForOrderHeader" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ReCalculateMileageForOrderHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReCalculateMileageForOrderHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ReCalculateMileageForLegHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReCalculateMileageForLegHeader" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ReCalculateMileageForLegHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReCalculateMileageForLegHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ComputePay_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComputePay" />
+  </wsdl:message>
+  <wsdl:message name="IWorkCycleService_ComputePay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComputePayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkCycleService">
+    <wsdl:operation name="GetToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/GetToken" message="tns:IWorkCycleService_GetToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/GetTokenResponse" message="tns:IWorkCycleService_GetToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/ReleaseToken" message="tns:IWorkCycleService_ReleaseToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/ReleaseTokenResponse" message="tns:IWorkCycleService_ReleaseToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewCarrier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewCarrier" message="tns:IWorkCycleService_NewCarrier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewCarrierResponse" message="tns:IWorkCycleService_NewCarrier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewCarriers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewCarriers" message="tns:IWorkCycleService_NewCarriers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewCarriersResponse" message="tns:IWorkCycleService_NewCarriers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCarrier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveCarrier" message="tns:IWorkCycleService_RetrieveCarrier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveCarrierResponse" message="tns:IWorkCycleService_RetrieveCarrier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedCarriers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedCarriers" message="tns:IWorkCycleService_RetrievePagedCarriers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedCarriersResponse" message="tns:IWorkCycleService_RetrievePagedCarriers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCarrier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/SaveCarrier" message="tns:IWorkCycleService_SaveCarrier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/SaveCarrierResponse" message="tns:IWorkCycleService_SaveCarrier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDriver">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveDriver" message="tns:IWorkCycleService_RetrieveDriver_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveDriverResponse" message="tns:IWorkCycleService_RetrieveDriver_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedDrivers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedDrivers" message="tns:IWorkCycleService_RetrievePagedDrivers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedDriversResponse" message="tns:IWorkCycleService_RetrievePagedDrivers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDriver">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/SaveDriver" message="tns:IWorkCycleService_SaveDriver_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/SaveDriverResponse" message="tns:IWorkCycleService_SaveDriver_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/SaveOrder" message="tns:IWorkCycleService_SaveOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/SaveOrderResponse" message="tns:IWorkCycleService_SaveOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveOrder" message="tns:IWorkCycleService_RetrieveOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveOrderResponse" message="tns:IWorkCycleService_RetrieveOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewOrder" message="tns:IWorkCycleService_NewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewOrderResponse" message="tns:IWorkCycleService_NewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewOrders" message="tns:IWorkCycleService_NewOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewOrdersResponse" message="tns:IWorkCycleService_NewOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/GetOrder" message="tns:IWorkCycleService_GetOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/GetOrderResponse" message="tns:IWorkCycleService_GetOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewStop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewStop" message="tns:IWorkCycleService_NewStop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewStopResponse" message="tns:IWorkCycleService_NewStop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewStops">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewStops" message="tns:IWorkCycleService_NewStops_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewStopsResponse" message="tns:IWorkCycleService_NewStops_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/GetStop" message="tns:IWorkCycleService_GetStop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/GetStopResponse" message="tns:IWorkCycleService_GetStop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStopByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/GetStopByID" message="tns:IWorkCycleService_GetStopByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/GetStopByIDResponse" message="tns:IWorkCycleService_GetStopByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/UpdateStop" message="tns:IWorkCycleService_UpdateStop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/UpdateStopResponse" message="tns:IWorkCycleService_UpdateStop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/DeleteStop" message="tns:IWorkCycleService_DeleteStop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/DeleteStopResponse" message="tns:IWorkCycleService_DeleteStop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewFreight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewFreight" message="tns:IWorkCycleService_NewFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewFreightResponse" message="tns:IWorkCycleService_NewFreight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewFreights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewFreights" message="tns:IWorkCycleService_NewFreights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewFreightsResponse" message="tns:IWorkCycleService_NewFreights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/GetFreight" message="tns:IWorkCycleService_GetFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/GetFreightResponse" message="tns:IWorkCycleService_GetFreight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFreight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/UpdateFreight" message="tns:IWorkCycleService_UpdateFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/UpdateFreightResponse" message="tns:IWorkCycleService_UpdateFreight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFreight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/DeleteFreight" message="tns:IWorkCycleService_DeleteFreight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/DeleteFreightResponse" message="tns:IWorkCycleService_DeleteFreight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewCompany" message="tns:IWorkCycleService_NewCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewCompanyResponse" message="tns:IWorkCycleService_NewCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewCompanies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewCompanies" message="tns:IWorkCycleService_NewCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewCompaniesResponse" message="tns:IWorkCycleService_NewCompanies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveCompany" message="tns:IWorkCycleService_RetrieveCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveCompanyResponse" message="tns:IWorkCycleService_RetrieveCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/SaveCompany" message="tns:IWorkCycleService_SaveCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/SaveCompanyResponse" message="tns:IWorkCycleService_SaveCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedContacts" message="tns:IWorkCycleService_RetrievePagedContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedContactsResponse" message="tns:IWorkCycleService_RetrievePagedContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveCity" message="tns:IWorkCycleService_RetrieveCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveCityResponse" message="tns:IWorkCycleService_RetrieveCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/GetCommodity" message="tns:IWorkCycleService_GetCommodity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/GetCommodityResponse" message="tns:IWorkCycleService_GetCommodity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewReferenceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/NewReferenceNumber" message="tns:IWorkCycleService_NewReferenceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/NewReferenceNumberResponse" message="tns:IWorkCycleService_NewReferenceNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveReferenceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveReferenceNumber" message="tns:IWorkCycleService_RetrieveReferenceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveReferenceNumberResponse" message="tns:IWorkCycleService_RetrieveReferenceNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveReferenceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/SaveReferenceNumber" message="tns:IWorkCycleService_SaveReferenceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/SaveReferenceNumberResponse" message="tns:IWorkCycleService_SaveReferenceNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReferenceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/DeleteReferenceNumber" message="tns:IWorkCycleService_DeleteReferenceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/DeleteReferenceNumberResponse" message="tns:IWorkCycleService_DeleteReferenceNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTractor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveTractor" message="tns:IWorkCycleService_RetrieveTractor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveTractorResponse" message="tns:IWorkCycleService_RetrieveTractor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedTractors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedTractors" message="tns:IWorkCycleService_RetrievePagedTractors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedTractorsResponse" message="tns:IWorkCycleService_RetrievePagedTractors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTractor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/SaveTractor" message="tns:IWorkCycleService_SaveTractor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/SaveTractorResponse" message="tns:IWorkCycleService_SaveTractor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTrailer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveTrailer" message="tns:IWorkCycleService_RetrieveTrailer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrieveTrailerResponse" message="tns:IWorkCycleService_RetrieveTrailer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedTrailers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedTrailers" message="tns:IWorkCycleService_RetrievePagedTrailers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RetrievePagedTrailersResponse" message="tns:IWorkCycleService_RetrievePagedTrailers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrailer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/SaveTrailer" message="tns:IWorkCycleService_SaveTrailer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/SaveTrailerResponse" message="tns:IWorkCycleService_SaveTrailer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/RateOrder" message="tns:IWorkCycleService_RateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/RateOrderResponse" message="tns:IWorkCycleService_RateOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFuelTaxMileageByApp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/GetFuelTaxMileageByApp" message="tns:IWorkCycleService_GetFuelTaxMileageByApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/GetFuelTaxMileageByAppResponse" message="tns:IWorkCycleService_GetFuelTaxMileageByApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFuelTaxMileageByInterface">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/GetFuelTaxMileageByInterface" message="tns:IWorkCycleService_GetFuelTaxMileageByInterface_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/GetFuelTaxMileageByInterfaceResponse" message="tns:IWorkCycleService_GetFuelTaxMileageByInterface_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlkMileageLookupFromStopList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/AlkMileageLookupFromStopList" message="tns:IWorkCycleService_AlkMileageLookupFromStopList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/AlkMileageLookupFromStopListResponse" message="tns:IWorkCycleService_AlkMileageLookupFromStopList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReCalculateMileageForMove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/ReCalculateMileageForMove" message="tns:IWorkCycleService_ReCalculateMileageForMove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/ReCalculateMileageForMoveResponse" message="tns:IWorkCycleService_ReCalculateMileageForMove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReCalculateMileageForOrderHeader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/ReCalculateMileageForOrderHeader" message="tns:IWorkCycleService_ReCalculateMileageForOrderHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/ReCalculateMileageForOrderHeaderResponse" message="tns:IWorkCycleService_ReCalculateMileageForOrderHeader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReCalculateMileageForLegHeader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/ReCalculateMileageForLegHeader" message="tns:IWorkCycleService_ReCalculateMileageForLegHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/ReCalculateMileageForLegHeaderResponse" message="tns:IWorkCycleService_ReCalculateMileageForLegHeader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComputePay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkCycleService/ComputePay" message="tns:IWorkCycleService_ComputePay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkCycleService/ComputePayResponse" message="tns:IWorkCycleService_ComputePay_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWorkCycleService" type="tns:IWorkCycleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetToken">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/GetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseToken">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/ReleaseToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewCarrier">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewCarrier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewCarriers">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewCarriers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCarrier">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrieveCarrier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedCarriers">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrievePagedCarriers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCarrier">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/SaveCarrier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDriver">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrieveDriver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedDrivers">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrievePagedDrivers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDriver">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/SaveDriver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOrder">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/SaveOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveOrder">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrieveOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewOrder">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewOrders">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/GetOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewStop">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewStop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewStops">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewStops" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStop">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/GetStop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStopByID">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/GetStopByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStop">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/UpdateStop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStop">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/DeleteStop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewFreight">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewFreight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewFreights">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewFreights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFreight">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/GetFreight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFreight">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/UpdateFreight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFreight">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/DeleteFreight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewCompany">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewCompanies">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewCompanies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCompany">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrieveCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompany">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/SaveCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedContacts">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrievePagedContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveCity">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrieveCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodity">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/GetCommodity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewReferenceNumber">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/NewReferenceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveReferenceNumber">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrieveReferenceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveReferenceNumber">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/SaveReferenceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReferenceNumber">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/DeleteReferenceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTractor">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrieveTractor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedTractors">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrievePagedTractors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTractor">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/SaveTractor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTrailer">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrieveTrailer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePagedTrailers">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RetrievePagedTrailers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrailer">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/SaveTrailer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RateOrder">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/RateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFuelTaxMileageByApp">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/GetFuelTaxMileageByApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFuelTaxMileageByInterface">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/GetFuelTaxMileageByInterface" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlkMileageLookupFromStopList">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/AlkMileageLookupFromStopList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReCalculateMileageForMove">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/ReCalculateMileageForMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReCalculateMileageForOrderHeader">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/ReCalculateMileageForOrderHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReCalculateMileageForLegHeader">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/ReCalculateMileageForLegHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComputePay">
+      <soap:operation soapAction="http://tempuri.org/IWorkCycleService/ComputePay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkCycleService">
+    <wsdl:port name="BasicHttpBinding_IWorkCycleService" binding="tns:BasicHttpBinding_IWorkCycleService">
+      <soap:address location="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

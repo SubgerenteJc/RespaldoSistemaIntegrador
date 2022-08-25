@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Sl_Pilgrims.exe" version="1.0.0.0" publicKeyToken="d6aa684a650fd7f4" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Sl_Pilgrims" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Sl_Pilgrims.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="488360">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>MNZuah6tlUETO60scVwZca6UMZY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sl_Pilgrims.exe" size="732600">
+      <assemblyIdentity name="Sl_Pilgrims" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>IA+MiEMlfAUOsxh1LG1TIvYGgZY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Sl_Pilgrims.exe.config" size="3944">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>iEbOulLSHZlCCSYwCF3LFupIsO4=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-GF5D3J2\Dell" issuerKeyHash="a066a7f8e8a96dbb1e59341fdd2d17dc35dd8243" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>z6bwHiyvW/DVjlAd1DKXav8jyJ4=</DigestValue></Reference></SignedInfo><SignatureValue>F0nhLY357PPzfhQZtJjFA3DCnMR4WXcfl9eibYdn8a2OJzn7gP4m/N446slsjQCzwgUCtdwYjRPgMmwdX3ok/DQLLBJ/+CzEKJQgrCTAQtpsbXEQX/dIj4FCA3piZvv2+FEEqL9Aw13wOmX0AzTbHIV5L9s5z7QbGgaUZqaC3II=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>7EqTvpnYc3b9byuYURRGCs3dh50/msrPJmqDcyM8Fp1FWm2jJzd7EZnKjWfGwTJ01J+ZhFpG8cGo8tcr6SoE3q4aawjw22pe5Vf1SljMR10BePizjgZ++lAXxz1ARlMRH+MdEf4qi+Pj9XftUWSATG1Pcynkk93OUhPjATcg7Q0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9ec823ff6a9732d41d508ed5f05baf2c1ef0a6cf" Description="" Url=""><as:assemblyIdentity name="Sl_Pilgrims.exe" version="1.0.0.0" publicKeyToken="d6aa684a650fd7f4" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-GF5D3J2\Dell</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Fhe0cYyEPZVP2hcr2LhvMSYPsBg=</DigestValue></Reference></SignedInfo><SignatureValue>uiZDRcy8gWAnhcKMsGfa/GlF9OGa/F+fyBHXY8rcmtDvnGE2onVmKo2m2UMTQpnWM3cpR1DVJdjE9exBekQy8M+ZLRPegrU+u6rOzkgOEAgcpMbgwlODjXGWDa/pp0pBDyZHgjxfu9meMtvJQJAnsGM+K9dgVraEgTBhMGnZWYk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>7EqTvpnYc3b9byuYURRGCs3dh50/msrPJmqDcyM8Fp1FWm2jJzd7EZnKjWfGwTJ01J+ZhFpG8cGo8tcr6SoE3q4aawjw22pe5Vf1SljMR10BePizjgZ++lAXxz1ARlMRH+MdEf4qi+Pj9XftUWSATG1Pcynkk93OUhPjATcg7Q0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQLOoN018pW6pKvbUqSBCk6DANBgkqhkiG9w0BAQUFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtAEcARgA1AEQAMwBKADIAXABEAGUAbABsMB4XDTIyMDYwMTE1MTkwOVoXDTIzMDYwMTIxMTkwOVowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQBHAEYANQBEADMASgAyAFwARABlAGwAbDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA7EqTvpnYc3b9byuYURRGCs3dh50/msrPJmqDcyM8Fp1FWm2jJzd7EZnKjWfGwTJ01J+ZhFpG8cGo8tcr6SoE3q4aawjw22pe5Vf1SljMR10BePizjgZ++lAXxz1ARlMRH+MdEf4qi+Pj9XftUWSATG1Pcynkk93OUhPjATcg7Q0CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCnIJa6spqHqtEmSu5q+jSLiPXurlex+9zWRg/tHioZklUF15D4GkS4cpw4H1bK5G1IA9bRZgRvS/Uybkirj2519qWUrj2rPqQzlF1xk9BuqXylxKslgCq6Cl6oBPvul0Du9Q9QaYlWm6DYhvaL53PgwIDrSe9vdP5OfHNj2INm0A==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="3f0c230d-6017-4f20-856b-d30114831eb7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WorkCycleService.xsd" MetadataType="Schema" ID="652d66ae-b375-4348-95a2-7687b5af8b07" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WorkCycleService1.xsd" MetadataType="Schema" ID="dde148bd-587c-48d5-aa2f-aedab2d30b8f" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WorkCycleService2.xsd" MetadataType="Schema" ID="0da91698-bc0a-43f3-9ba4-f6f470ab77b1" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd3" />
+    <MetadataFile FileName="WorkCycleService.disco" MetadataType="Disco" ID="3c764b9b-052a-42be-8412-7c044cd7384e" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?disco" />
+    <MetadataFile FileName="WorkCycleService.wsdl" MetadataType="Wsdl" ID="73dd6940-b998-47d7-a81e-b0a21feca91a" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?wsdl" />
+    <MetadataFile FileName="WorkCycleService3.xsd" MetadataType="Schema" ID="131d677e-6ac8-4860-8191-94a6abc6db52" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd4" />
+    <MetadataFile FileName="WorkCycleService4.xsd" MetadataType="Schema" ID="22444a8a-734f-466f-ad17-976727d051d8" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd5" />
+    <MetadataFile FileName="WorkCycleService5.xsd" MetadataType="Schema" ID="d807c621-0117-43a4-8cab-b3aea7919fe0" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd6" />
+    <MetadataFile FileName="WorkCycleService6.xsd" MetadataType="Schema" ID="80d6a514-1052-4487-bf90-093e61a45b62" SourceId="1" SourceUrl="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

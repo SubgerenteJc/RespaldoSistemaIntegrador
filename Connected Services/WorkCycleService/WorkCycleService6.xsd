@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" />
+  <xs:import schemaLocation="http://69.20.92.116:8082/TMWSystemsLinkExternal_TMWGo/WorkCycle/WorkCycleService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.Services.ServiceInterfaces" />
+  <xs:element name="GetToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="GetTokenResult" nillable="true" type="q1:Token.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="ReleaseTokenResult" nillable="true" type="q2:Token.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCarrier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCarrierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewCarrierResult" nillable="true" type="q3:Carrier.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCarriers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCarriersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewCarriersResult" nillable="true" type="q4:Carrier.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCarrier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q5:Carrier.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCarrierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrieveCarrierResult" nillable="true" type="q6:Carrier.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedCarriers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q7:Carrier.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedCarriersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrievePagedCarriersResult" nillable="true" type="q8:Carrier.PagedReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCarrier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="carriers" nillable="true" type="q9:ArrayOfCarrier" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCarrierResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="SaveCarrierResult" nillable="true" type="q10:Carrier.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveDriver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q11:Driver.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveDriverResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrieveDriverResult" nillable="true" type="q12:Driver.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedDrivers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q13:Driver.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedDriversResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrievePagedDriversResult" nillable="true" type="q14:Driver.PagedReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDriver">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="drivers" nillable="true" type="q15:ArrayOfDriver" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDriverResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="SaveDriverResult" nillable="true" type="q16:Driver.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="orList" nillable="true" type="q17:ArrayOfOrder" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="SaveOrderResult" nillable="true" type="q18:Order.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="orCriteria" nillable="true" type="q19:Order.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrieveOrderResult" nillable="true" type="q20:Order.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewOrderResult" nillable="true" type="q21:Order.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewOrdersResult" nillable="true" type="q22:Order.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="GetOrderResult" nillable="true" type="q23:Order.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewStop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewStopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewStopResult" nillable="true" type="q24:Stop.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewStops">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewStopsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewStopsResult" nillable="true" type="q25:Stop.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="GetStopResult" nillable="true" type="q26:Stop.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStopByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStopByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="GetStopByIDResult" nillable="true" type="q27:Stop.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="stp" nillable="true" type="q28:Stop" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.Services.ServiceInterfaces" minOccurs="0" name="operation" type="q29:ListOperation" />
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="UpdateStopResult" nillable="true" type="q30:Stop.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteStop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteStopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="DeleteStopResult" nillable="true" type="q31:Stop.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewFreight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewFreightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewFreightResult" nillable="true" type="q32:Freight.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewFreights">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewFreightsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewFreightsResult" nillable="true" type="q33:Freight.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="fgtNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="GetFreightResult" nillable="true" type="q34:Freight.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFreight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="fgt" nillable="true" type="q35:Freight" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.Services.ServiceInterfaces" minOccurs="0" name="operation" type="q36:ListOperation" />
+        <xs:element minOccurs="0" name="fgtNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFreightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="UpdateFreightResult" nillable="true" type="q37:Freight.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFreight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="stpNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="fgtNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFreightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="DeleteFreightResult" nillable="true" type="q38:Freight.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewCompanyResult" nillable="true" type="q39:Company.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCompanies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewCompaniesResult" nillable="true" type="q40:Company.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q41:Company.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrieveCompanyResult" nillable="true" type="q42:Company.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="companies" nillable="true" type="q43:ArrayOfCompany" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="SaveCompanyResult" nillable="true" type="q44:Company.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedContacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q45:Contact.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedContactsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrievePagedContactsResult" nillable="true" type="q46:Contact.PagedReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q47:City.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveCityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrieveCityResult" nillable="true" type="q48:City.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commodityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommodityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="GetCommodityResult" nillable="true" type="q49:Commodity.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewReferenceNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewReferenceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="NewReferenceNumberResult" nillable="true" type="q50:ReferenceNumber.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveReferenceNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q51:ReferenceNumber.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveReferenceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrieveReferenceNumberResult" nillable="true" type="q52:ReferenceNumber.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReferenceNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="referenceNumbers" nillable="true" type="q53:ArrayOfReferenceNumber" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReferenceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="SaveReferenceNumberResult" nillable="true" type="q54:ReferenceNumber.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteReferenceNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="referenceNumberID" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteReferenceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="DeleteReferenceNumberResult" nillable="true" type="q55:ReferenceNumber.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTractor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q56:Tractor.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTractorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrieveTractorResult" nillable="true" type="q57:Tractor.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedTractors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q58:Tractor.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedTractorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrievePagedTractorsResult" nillable="true" type="q59:Tractor.PagedReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTractor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="tractors" nillable="true" type="q60:ArrayOfTractor" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTractorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="SaveTractorResult" nillable="true" type="q61:Tractor.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTrailer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q62:Trailer.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTrailerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrieveTrailerResult" nillable="true" type="q63:Trailer.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedTrailers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="criteria" nillable="true" type="q64:Trailer.Criteria" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePagedTrailersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RetrievePagedTrailersResult" nillable="true" type="q65:Trailer.PagedReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTrailer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="trailers" nillable="true" type="q66:ArrayOfTrailer" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTrailerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="SaveTrailerResult" nillable="true" type="q67:Trailer.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RateOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RateOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="RateOrderResult" nillable="true" type="q68:InvoiceDetail.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelTaxMileageByApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="originLookUpType" type="q69:MileageServerData.LookupType" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="destinationLookUpType" type="q70:MileageServerData.LookupType" />
+        <xs:element minOccurs="0" name="origin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destination" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="billTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intracityOverride" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelTaxMileageByAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="GetFuelTaxMileageByAppResult" nillable="true" type="q71:MileageServerData.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelTaxMileageByInterface">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="interfaceId" type="xs:int" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="originLookUpType" type="q72:MileageServerData.LookupType" />
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="destinationLookUpType" type="q73:MileageServerData.LookupType" />
+        <xs:element minOccurs="0" name="origin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destination" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="billTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intracityOverride" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFuelTaxMileageByInterfaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="GetFuelTaxMileageByInterfaceResult" nillable="true" type="q74:MileageServerData.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlkMileageLookupFromStopList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="stopList" nillable="true" type="q75:ArrayOfMileageServerData.StopObject" />
+        <xs:element minOccurs="0" name="mileageType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="report" type="xs:short" />
+        <xs:element minOccurs="0" name="bufferlength" type="xs:short" />
+        <xs:element minOccurs="0" name="interfaceId" type="xs:int" />
+        <xs:element minOccurs="0" name="stopLookupEasyMatch" type="xs:short" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlkMileageLookupFromStopListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="AlkMileageLookupFromStopListResult" nillable="true" type="q76:MileageALKData.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReCalculateMileageForMove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="moveNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReCalculateMileageForMoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="ReCalculateMileageForMoveResult" nillable="true" type="q77:MileageServerData.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReCalculateMileageForOrderHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReCalculateMileageForOrderHeaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="ReCalculateMileageForOrderHeaderResult" nillable="true" type="q78:MileageServerData.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReCalculateMileageForLegHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="legNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReCalculateMileageForLegHeaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="ReCalculateMileageForLegHeaderResult" nillable="true" type="q79:MileageServerData.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComputePay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="legHeaderNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="secureTokenValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComputePayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/TMWSystems.SystemsLink.APIClasses" minOccurs="0" name="ComputePayResult" nillable="true" type="q80:PayDetail.ReturnObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
